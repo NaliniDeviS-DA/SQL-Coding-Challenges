@@ -44,12 +44,14 @@ SELECT * FROM emp_name_dept;
 
 -- SQL Question 3: Complex View
 
+CREATE VIEW emp_dept_salary AS
 SELECT 
 e.employee_name, e.gender, e.hire_date, e.designation, d.department_name, s.salary 
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id 
 JOIN salary s ON e.salary_id = s.salry_id;
-    
+
+SELECT * FROM emp_dept_salary;
     
     
     
